@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_noticias"
+        android:icon="@drawable/web"
+        android:title="Noticias" />
+
+    <item
+        android:id="@+id/navigation_youtube"
+        android:icon="@drawable/youtube"
+        android:title="Vídeos"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/navigation_twitter"
+        android:icon="@drawable/gorjeo"
+        android:title="Twitter" />
+    <item
+        android:id="@+id/navigation_instagram"
+        android:icon="@drawable/instagram"
+        android:title="Instagram" />
+
+    <item
+        android:id="@+id/navigation_menu"
+        android:icon="@drawable/ic_action_name"
+        android:title="Menú" />
+
+</menu>

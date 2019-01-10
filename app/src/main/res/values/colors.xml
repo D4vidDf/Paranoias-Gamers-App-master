@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#ab47bc</color>
+
+    <color name="colorPrimaryDark">#790e8b</color>
+
+    <color name="colorAccent">#00d71fd7</color>
+
+    <color name="primary_text_default_material_light">#B2000000</color>
+
+    <color name="background_material_dark">#ffffff</color>
+
+
+    <!-- Android -->
+
+
+    <color name="white">#ffffff</color>
+
+
+    <!-- common -->
+
+
+    <!--send trouble shooting-->
+
+
+    <!--copy code-->
+
+
+    <!--ec detail product-->
+
+
+    <color  name="green1">#139E91</color>
+
+    <color name="textColorPrimary">#DE000000</color>
+    <color name="textColorSecondary">#9E9E9E</color>
+    <!-- inverse text color: 87% black -->
+    <color name="textColorPrimaryInverse">#FFFFFF</color>
+    <color name="textColorSecondaryInverse">#9E9E9E</color>
+
+
+    <color name="black">#000000</color>
+
+</resources>

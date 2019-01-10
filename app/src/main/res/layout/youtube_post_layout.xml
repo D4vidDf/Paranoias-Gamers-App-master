@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_margin="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Product Image -->
+
+            <LinearLayout
+                android:id="@+id/imagen"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_alignParentLeft="true">
+                <ImageView
+                    android:id="@+id/ImageThumb"
+                    android:layout_width="fill_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+            </LinearLayout>
+
+            <!-- Rest of the product info and add/remove to/from cart symbols -->
+
+            <LinearLayout
+                android:id="@+id/idBottomLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imagen"
+                android:padding="5dp">
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="0dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/canal" />
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="video Title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:textStyle="normal|bold" />
+
+
+                <TextView
+                    android:id="@+id/textViewDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="12dp"
+                    android:text="Video publicado el"
+
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

@@ -1,0 +1,211 @@
+{
+  "project_info": {
+    "project_number": "186696510097",
+    "firebase_url": "https://run-piie-29839808.firebaseio.com",
+    "project_id": "run-piie-29839808",
+    "storage_bucket": "run-piie-29839808.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186696510097:android:27cc9cf5327175a2",
+        "android_client_info": {
+          "package_name": "com.daviddf.publicarenparanoiasgamers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186696510097-itjhu76j84t848nm4nhh10jnjdnfuq8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.daviddf.publicarenparanoiasgamers",
+            "certificate_hash": "9b7cc4ef617af4c6aad7051e7c50424256e37f0c"
+          }
+        },
+        {
+          "client_id": "186696510097-sdrbvjpe370arlt7j6ehmb7lkp2mpqbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVQr1RRNvuTh6E4yCOXBZSbGrx9BTazMA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186696510097-sdrbvjpe370arlt7j6ehmb7lkp2mpqbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186696510097:android:c0971dc6971b2a48",
+        "android_client_info": {
+          "package_name": "com.example.ireribrian.firebasechatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186696510097-29afbpa19h64229hhnv78oe4rjq9pfhq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ireribrian.firebasechatapp",
+            "certificate_hash": "9b7cc4ef617af4c6aad7051e7c50424256e37f0c"
+          }
+        },
+        {
+          "client_id": "186696510097-sdrbvjpe370arlt7j6ehmb7lkp2mpqbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVQr1RRNvuTh6E4yCOXBZSbGrx9BTazMA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186696510097-sdrbvjpe370arlt7j6ehmb7lkp2mpqbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186696510097:android:bbdacad9d586266a",
+        "android_client_info": {
+          "package_name": "com.github.h01d.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186696510097-gppvohacj99u6snehfkjqqodb06rnsmd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.github.h01d.chatapp",
+            "certificate_hash": "9b7cc4ef617af4c6aad7051e7c50424256e37f0c"
+          }
+        },
+        {
+          "client_id": "186696510097-sdrbvjpe370arlt7j6ehmb7lkp2mpqbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVQr1RRNvuTh6E4yCOXBZSbGrx9BTazMA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186696510097-sdrbvjpe370arlt7j6ehmb7lkp2mpqbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186696510097:android:2edd14ed99ff8542",
+        "android_client_info": {
+          "package_name": "net.com.daviddf.paranoiasgamers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186696510097-lp1dci8mb0351olsbpbvk4jtols09mf9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.com.daviddf.paranoiasgamers",
+            "certificate_hash": "87bf76390c79a875f169ddad8bc088b64d8a6da3"
+          }
+        },
+        {
+          "client_id": "186696510097-ls3ors9vvrluln69kmgnm56gh0ejp199.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.com.daviddf.paranoiasgamers",
+            "certificate_hash": "9b7cc4ef617af4c6aad7051e7c50424256e37f0c"
+          }
+        },
+        {
+          "client_id": "186696510097-b2q5be6utvaa7h8nuo4ksm4uskggs9s3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.com.daviddf.paranoiasgamers",
+            "certificate_hash": "961c299faca720ac066e7e8cdf1a7fb9941f0dcf"
+          }
+        },
+        {
+          "client_id": "186696510097-464h4uou6t7vs7et4jftv5huvn9nb40e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.com.daviddf.paranoiasgamers",
+            "certificate_hash": "531e6fd9c977b0e00b76769c1202a049727f239f"
+          }
+        },
+        {
+          "client_id": "186696510097-sdrbvjpe370arlt7j6ehmb7lkp2mpqbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVQr1RRNvuTh6E4yCOXBZSbGrx9BTazMA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186696510097-sdrbvjpe370arlt7j6ehmb7lkp2mpqbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
