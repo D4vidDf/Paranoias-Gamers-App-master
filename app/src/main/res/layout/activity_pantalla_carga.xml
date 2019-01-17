@@ -11,6 +11,7 @@
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/restless_gift"
         app:srcCompat="@raw/restless_gift"
-        app:lottie_loop="true" />
+
+         />
 
 </RelativeLayout>

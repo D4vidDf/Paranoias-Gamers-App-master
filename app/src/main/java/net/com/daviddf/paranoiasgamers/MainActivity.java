@@ -1,5 +1,6 @@
 package net.com.daviddf.paranoiasgamers;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -8,6 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.appindexing.Action;
+import com.google.firebase.appindexing.FirebaseAppIndex;
+import com.google.firebase.appindexing.FirebaseUserActions;
+import com.google.firebase.appindexing.Indexable;
+import com.google.firebase.appindexing.builders.Actions;
 
 import net.com.daviddf.paranoiasgamers.fragments.ChannelFragment;
 import net.com.daviddf.paranoiasgamers.fragments.Noticias;
@@ -23,6 +29,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         loadFragment(new Noticias());
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
+        // ATTENTION: This was auto-generated to handle app links.
+        Intent appLinkIntent = getIntent();
+        String appLinkAction = appLinkIntent.getAction();
+        Uri appLinkData = appLinkIntent.getData();
     }
 
 
@@ -75,5 +85,31 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     }
 
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    public Action getIndexApiAction() {
+        return Actions.newView("Main", "https://paranoiasgamers.com");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        FirebaseAppIndex.getInstance().update(new Indexable.Builder().setName("Main").setUrl("https://paranoiasgamers.com").build());
+        FirebaseUserActions.getInstance().start(getIndexApiAction());
+    }
+
+    @Override
+    public void onStop() {
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        FirebaseUserActions.getInstance().end(getIndexApiAction());
+        super.onStop();
+    }
 }
 

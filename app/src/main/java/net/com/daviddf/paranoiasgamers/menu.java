@@ -1,16 +1,23 @@
 package net.com.daviddf.paranoiasgamers;
 
+import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.cardview.widget.CardView;
+
+import saschpe.android.customtabs.CustomTabsHelper;
+import saschpe.android.customtabs.WebViewFallback;
 
 public class menu extends AppCompatActivity {
 
@@ -33,32 +40,50 @@ public class menu extends AppCompatActivity {
 
         //acciones
         amigos.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                Uri amigos = Uri.parse("https://foro.paranoiasgamers.com");
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                builder.addDefaultShareMenuItem();
+                builder.setToolbarColor(getColor(R.color.colorPrimary));
+                builder.setShowTitle(true);
+                CustomTabsIntent customTabsIntent = builder.build();
 
-                Intent amigoss = new Intent(Intent.ACTION_VIEW, amigos);
+// This is optional but recommended
+                CustomTabsHelper.addKeepAliveExtra(menu.this, customTabsIntent.intent);
 
-                startActivity(amigoss);
+// This is where the magic happens...
+                CustomTabsHelper.openCustomTab(menu.this, customTabsIntent,
+                        Uri.parse("https://foro.paranoiasgamers.com"),
+                        new WebViewFallback());
             }
         });
         donaciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 final Dialog builder = new Dialog(menu.this);
+                final Dialog builder = new Dialog(menu.this);
                 builder.setContentView(R.layout.popup);
                 TextView title = (TextView) builder.findViewById(R.id.title);
                 ImageButton imageButton = (ImageButton) builder.findViewById(R.id.image);
                 builder.show();
                 Button clickButton = (Button) builder.findViewById(R.id.buyButtondon);
                 clickButton.setOnClickListener(new View.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
                     public void onClick(View v) {
-                        Uri donar = Uri.parse("https://paypal.me/DavidDominguezfondo");
+                        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                        builder.addDefaultShareMenuItem();
+                        builder.setToolbarColor(getColor(R.color.colorPrimary));
+                        builder.setShowTitle(true);
+                        CustomTabsIntent customTabsIntent = builder.build();
 
-                        Intent donador = new Intent(Intent.ACTION_VIEW, donar);
+// This is optional but recommended
+                        CustomTabsHelper.addKeepAliveExtra(menu.this, customTabsIntent.intent);
 
-                        startActivity(donador);
+// This is where the magic happens...
+                        CustomTabsHelper.openCustomTab(menu.this, customTabsIntent,
+                                Uri.parse("https://paypal.me/DavidDominguezfondo"),
+                                new WebViewFallback());
                     }
                 });
 
@@ -66,24 +91,42 @@ public class menu extends AppCompatActivity {
 
         });
         twitter.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                Uri uritwitter = Uri.parse("https://twitter.com/ParanoiasGamers");
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                builder.addDefaultShareMenuItem();
+                builder.setToolbarColor(getColor(R.color.colorPrimary));
+                builder.setShowTitle(true);
+                CustomTabsIntent customTabsIntent = builder.build();
 
-                Intent twitter = new Intent(Intent.ACTION_VIEW, uritwitter);
+// This is optional but recommended
+                CustomTabsHelper.addKeepAliveExtra(menu.this, customTabsIntent.intent);
 
-                startActivity(twitter);
+// This is where the magic happens...
+                CustomTabsHelper.openCustomTab(menu.this, customTabsIntent,
+                        Uri.parse("https://twitter.com/ParanoiasGamers"),
+                        new WebViewFallback());
 
             }
         });
         facebook.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                Uri urifacebook = Uri.parse("https://www.facebook.com/paranoiasgamersyt/\n");
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                builder.addDefaultShareMenuItem();
+                builder.setToolbarColor(getColor(R.color.colorPrimary));
+                builder.setShowTitle(true);
+                CustomTabsIntent customTabsIntent = builder.build();
 
-                Intent facebook = new Intent(Intent.ACTION_VIEW, urifacebook);
+// This is optional but recommended
+                CustomTabsHelper.addKeepAliveExtra(menu.this, customTabsIntent.intent);
 
-                startActivity(facebook);
+// This is where the magic happens...
+                CustomTabsHelper.openCustomTab(menu.this, customTabsIntent,
+                        Uri.parse("https://facebook.com/paranoiasgamersyt"),
+                        new WebViewFallback());
 
             }
         });
@@ -110,30 +153,50 @@ public class menu extends AppCompatActivity {
             }
         });
         web.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                Uri uriweb = Uri.parse("https://paranoiasgamers.com");
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                builder.addDefaultShareMenuItem();
+                builder.setToolbarColor(getColor(R.color.colorPrimary));
+                builder.setShowTitle(true);
+                CustomTabsIntent customTabsIntent = builder.build();
 
-                Intent web = new Intent(Intent.ACTION_VIEW, uriweb);
+// This is optional but recommended
+                CustomTabsHelper.addKeepAliveExtra(menu.this, customTabsIntent.intent);
 
-                startActivity(web);
-
+// This is where the magic happens...
+                CustomTabsHelper.openCustomTab(menu.this, customTabsIntent,
+                        Uri.parse("https://paranoiasgamers.com"),
+                        new WebViewFallback());
             }
         });
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final Dialog builder = new Dialog(menu.this);
+                builder.setContentView(R.layout.chatpop);
+                builder.show();
 
             }
         });
         apps.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                Uri uriapps = Uri.parse("https://aplicacion.paranoiasgamers.com");
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                builder.addDefaultShareMenuItem();
+                builder.setToolbarColor(getColor(R.color.colorPrimary));
+                builder.setShowTitle(true);
+                CustomTabsIntent customTabsIntent = builder.build();
 
-                Intent apps = new Intent(Intent.ACTION_VIEW, uriapps);
+// This is optional but recommended
+                CustomTabsHelper.addKeepAliveExtra(menu.this, customTabsIntent.intent);
 
-                startActivity(apps);
+// This is where the magic happens...
+                CustomTabsHelper.openCustomTab(menu.this, customTabsIntent,
+                        Uri.parse("https://aplicacion.paranoiasgamers.com"),
+                        new WebViewFallback());
 
             }
         });
@@ -144,6 +207,10 @@ public class menu extends AppCompatActivity {
             }
         });
 
+        // ATTENTION: This was auto-generated to handle app links.
+        Intent appLinkIntent = getIntent();
+        String appLinkAction = appLinkIntent.getAction();
+        Uri appLinkData = appLinkIntent.getData();
     }
 
 

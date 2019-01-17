@@ -53,14 +53,17 @@ public class ViewPost extends AppCompatActivity implements AppBarLayout.OnOffset
 
 
         Toolbar toolbar = findViewById(R.id.flexible_example_toolbar);
-        toolbar.setTitle(title);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+
+                return;
             }
         });
-
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Noticias");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         AppBarLayout appbar = findViewById(R.id.flexible_example_appbar);
         appbar.addOnOffsetChangedListener(this);
 

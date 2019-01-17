@@ -45,7 +45,7 @@
             android:id="@+id/pip"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:visibility="gone"
+            android:visibility="invisible"
             android:layout_marginStart="15dp"
             android:background="#FFFFFF"
             app:srcCompat="@drawable/ic_action_pip" />

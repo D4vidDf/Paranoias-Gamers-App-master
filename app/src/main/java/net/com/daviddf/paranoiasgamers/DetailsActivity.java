@@ -1,6 +1,5 @@
 package net.com.daviddf.paranoiasgamers;
 
-import android.app.PictureInPictureParams;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -8,12 +7,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
-import android.util.Rational;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -90,38 +87,10 @@ play.setOnClickListener(new View.OnClickListener() {
 });
         mList_videos = (RecyclerView) findViewById(R.id.mList_videos);
         new RequestYoutubeCommentAPI().execute();
-        final ImageButton pip = (ImageButton) findViewById(R.id.pip);
-        pip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (android.os.Build.VERSION.SDK_INT >= 26) {
 
-                        Rational rational = new Rational(mYoutubePlayerView.getWidth(),
-                                mYoutubePlayerView.getHeight());
-
-                        PictureInPictureParams mParams =
-                                new PictureInPictureParams.Builder()
-                                        .setAspectRatio(rational)
-                                        .build();
-                        DetailsActivity.this.enterPictureInPictureMode(mParams);
-                } else {
-                    Toast.makeText(DetailsActivity.this, "Es necesario estar en android Oreo para poder Utilizar el modo Imagen en Imagen", Toast.LENGTH_LONG).show();
-                }mYoutubePlayer.play();
-            }
-        });
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    @Override
-    public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode) {
-        super.onPictureInPictureModeChanged(isInPictureInPictureMode);
-        if (isInPictureInPictureMode){
 
-        }
-        else{
-
-        }
-    }
     public void back_btn_pressed(View view) {
         finish();
     }

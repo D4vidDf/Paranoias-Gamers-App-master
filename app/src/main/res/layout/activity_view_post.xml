@@ -25,11 +25,13 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/flexible.example.toolbar"
+                android:id="@+id/flexible_example_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="#673AB7"
+                android:splitMotionEvents="true"
                 app:layout_collapseMode="pin"
+                app:titleTextAppearance="@style/TextAppearance.Header"
                 app:titleTextColor="@color/cardview_light_background" />
 
             <ImageView
@@ -74,23 +76,22 @@
                     >
 
                     <TextView
+                        android:id="@+id/posttitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/adamina"
                         android:text="Title"
-                        android:id="@+id/posttitle"
-                        android:textAppearance="@style/TextAppearance.Header"
 
-                        />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
                     <TextView
+                        android:id="@+id/postcontent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-light"
+                        android:fontFamily="@font/alegreya"
                         android:lineSpacingExtra="8dp"
-                        android:textSize="16sp"
-                        android:id="@+id/postcontent"
                         android:text="Hello"
-                        />
+                        android:textSize="16sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -101,11 +102,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="32dp"
+        android:cropToPadding="false"
         android:elevation="8dp"
         android:src="@mipmap/ic_share"
         android:tint="#FFFFFF"
         app:backgroundTint="#9761F3"
         app:backgroundTintMode="multiply"
+        app:fabSize="auto"
         app:layout_anchor="@id/flexible.example.cardview"
         app:layout_anchorGravity="top|right|end"
         tools:ignore="RtlHardcoded" />

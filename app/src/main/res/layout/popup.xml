@@ -74,7 +74,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/texterror"
+            android:id="@+id/cons"
             android:layout_below="@+id/image"
             android:fontFamily="monospace"
             android:gravity="center"
@@ -88,7 +88,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/texterror"
+            android:layout_below="@id/cons"
             android:background="@color/white"
             android:layout_centerInParent="true"
             app:cardCornerRadius="20dp">
@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:visibility="invisible"
             android:id="@+id/click"
-            android:layout_below="@id/texterror"/>
+            android:layout_below="@id/cons"/>
 
     </RelativeLayout>
 

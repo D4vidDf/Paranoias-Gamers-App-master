@@ -28,6 +28,12 @@
     <string name="error">ERROR</string>
     <string name="no_se_ha_podido_establecer_conexi_n_con_el_servidor">No se ha podido establecer conexión con el servidor.</string>
     <string name="comentarios">comentarios</string>
+    <string name="este_servicio_est_en_construcci_n_nmantente_atento_para_saber_cuando_acceder_a_esta_funci_n">Este servicio está en construcción.\nMantente atento para saber cuando acceder a esta función</string>
+    <string name="en_construcci_n">EN CONSTRUCCIÓN</string>
+    <string name="hablar">Hablar</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cargando">Cargando...</string>
 
 </resources>
