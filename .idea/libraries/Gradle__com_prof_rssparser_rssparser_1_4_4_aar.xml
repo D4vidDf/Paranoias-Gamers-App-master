@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.prof.rssparser:rssparser:1.4.4@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e477dc86a644ab8c30800ec3043b5d7/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e477dc86a644ab8c30800ec3043b5d7/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba23dc84ca77f81b04a8b49dce4a505c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba23dc84ca77f81b04a8b49dce4a505c/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

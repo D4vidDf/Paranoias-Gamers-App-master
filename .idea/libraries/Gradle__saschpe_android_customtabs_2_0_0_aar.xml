@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: saschpe.android:customtabs:2.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a3e55c88f61be424d428f9996d7ba6a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a3e55c88f61be424d428f9996d7ba6a/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/saschpe.android/customtabs/2.0.0/6ab3683161fe1e94f0890faeb8bfb427cf680b18/customtabs-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

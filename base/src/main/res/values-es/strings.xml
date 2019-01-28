@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paranoias Gamers</string>
+    <string name="action_reply">Responder</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_share">Compartir</string>
+    <string name="alert_message">Imposible cargar información. Comprueba la conexión!</string>
+    <string name="alert_positive">Cerrar</string>
+    <string name="alert_title">Alerta!</string>
+    <string name="cargando">Cargando...</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="news">Noticias</string>
+</resources>

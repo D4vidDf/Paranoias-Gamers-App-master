@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">Paranoias Gamers</string>
+
+    <!-- Strings related to login -->
+
+    <!-- TODO: remove this placeholder text -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+
+    <!-- TODO: remove this placeholder text -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="alert_title" translatable="false">Attention!</string>
+    <string name="alert_message" translatable="false">Unable to load data.\nCheck your connection!</string>
+    <string name="alert_positive" translatable="false">Close</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="laravel_launches_app" translatable="false">Laravel launches app</string>
+    <string name="news">NEWS</string>
+    <string name="conexi_n_perdida_revisa_la_conexi_n_wi_fi_o_los_datos_moviles" translatable="false">Conexión perdida.\nRevisa la conexión WI-FI o los datos moviles.</string>
+    <string name="error" translatable="false">ERROR</string>
+    <string name="no_se_ha_podido_establecer_conexi_n_con_el_servidor" translatable="false">No se ha podido establecer conexión con el servidor.</string>
+    <string name="comentarios">Comments</string>
+    <string name="este_servicio_est_en_construcci_n_nmantente_atento_para_saber_cuando_acceder_a_esta_funci_n" translatable="false">Este servicio está en construcción.\nMantente atento para saber cuando acceder a esta función</string>
+    <string name="en_construcci_n" translatable="false">EN CONSTRUCCIÓN</string>
+    <string name="hablar" translatable="false">Hablar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="cargando" translatable="false">Loading...</string>
+
+    <string name="new_message_notification_title_template" translatable="false">New message: %1$s</string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="new_message_notification_placeholder_text_template" translatable="false">You said %1$s and lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel
+        semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis.
+        Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper
+        ornare lacus. Duis ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis
+        viverra rhoncus sit amet nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec
+        tortor.
+    </string>
+
+    <string name="action_share" translatable="false">Share</string>
+    <string name="action_reply" translatable="false">Reply</string>
+    <string name="title_activity_donacion_anuncio" translatable="false">DonacionAnuncio</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="interstitial_ad_sample" translatable="false">Interstitial Ad Sample</string>
+    <string name="start_level" translatable="false">Nivel 1</string>
+    <string name="next_level" translatable="false">Jugar</string>
+    <!-- -
+        This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
+        For more information, see https://support.google.com/admob/answer/3052638
+    <!- -->
+    <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-1898862918213076/6695794738</string>
+    <string name="supera_al_anuncio" translatable="false">Supera al anuncio</string>
+
+    <!-- all -->
+    <string name="all_app_version" translatable="false">Sample UI v%1$s / SDK v%2$s</string>
+
+    <string name="all_create" translatable="false">Crear</string>
+    <string name="all_invite" translatable="false">Invitar</string>
+
+    <string name="all_group_channels" translatable="false" >Grupos</string>
+    <string name="all_open_channels" translatable="false">Canales Abiertos</string>
+
+    <!-- main -->
+    <string name="main_drawer_open" translatable="false">Abrir navegación</string>
+    <string name="main_drawer_close" translatable="false">Cerrar navegador</string>
+    <string name="select_channel_type" translatable="false">Selecciona tipo de canal</string>
+    <string name="settings" translatable="false">Ajustes</string>
+    <string name="blocked_members_list" translatable="false">Usuarios bloqueados</string>
+
+    <!-- login -->
+    <string name="login_user_id" translatable="false">User ID</string>
+    <string name="login_user_nickname" translatable="false">Nombre de Usuario</string>
+    <string name="login_connect" translatable="false">Entrar</string>
+    <string name="login_disconnect" translatable="false">Salir</string>
+
+    <!-- Open Channel List -->
+    <string name="open_channel_list_participant_count" translatable="false" >%1$d participantes</string>
+
+    <string name="create_open_channel" translatable="false">Crear canal abierto</string>
+    <string name="participant_list" translatable="false">Participantes</string>
+
+    <!-- Group Channel List -->
+    <string name="group_channel_list_file_message_text" translatable="false">%1$s ha subido un archivo.</string>
+
+    <string name="create_group_channel" translatable="false">Crear Grupo</string>
+    <string name="member_list" translatable="false">Miembros</string>
+    <string name="invite_member" translatable="false">Invitar miembros</string>
+
+    <string name="member_info" translatable="false"></string>
+
+    <!-- Content descriptions -->
+    <string name="open_channel_chat_content_desc_profile" translatable="false">Imagen de perfil</string>
+
+    <!-- Menu actions -->
+    <string name="action_create_channel" translatable="false">Crear canal</string>
+
+    <string name="download" translatable="false">Descargar</string>
+    <string name="cancel" translatable="false">Cancelar</string>
+    <string name="upload" translatable="false">Subir</string>
+    <string name="resend_message" translatable="false">Reenviar</string>
+    <string name="delete_message" translatable="false">Borrar</string>
+
+    <!-- Message Status -->
+    <string name="message_sending" translatable="false">Enviando</string>
+    <string name="message_failed" translatable="false">ERROR</string>
+    <string name="antes_de_entrar">Antes de entrar</string>
+    <string name="la_palabra_clave_es_nica_por_lo_cual_acuerdese_de_ella_junto_a_su_usuario_debido_a_que_funcionar_como_una_contrase_a">La palabra clave es única por lo cual acuerdese de ella junto a su usuario debido a que funcionará como una contraseña</string>
+</resources>
