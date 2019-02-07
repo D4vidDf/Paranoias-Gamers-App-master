@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.dinuscxj:circleprogressbar:1.1.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/283d9e4d50bfc5cd9a90f68bc976fe28/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bcc70ed066463a7a1442b635b0e061b3/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/283d9e4d50bfc5cd9a90f68bc976fe28/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/283d9e4d50bfc5cd9a90f68bc976fe28/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bcc70ed066463a7a1442b635b0e061b3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bcc70ed066463a7a1442b635b0e061b3/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

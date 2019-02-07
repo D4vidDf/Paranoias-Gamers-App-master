@@ -52,7 +52,6 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
     TextView textViewDes;
     // ImageView imageViewIcon;
     public static final String VIDEO_ID = "c2UNv38V6y4";
-    private YouTubePlayerView mYoutubePlayerView = null;
     private YouTubePlayer mYoutubePlayer = null;
     private ArrayList<YoutubeCommentModel> mListData = new ArrayList<>();
     private CommentAdapter mAdapter = null;
@@ -68,7 +67,7 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
         Log.e("", youtubeDataModel.getDescription());
         MediaController mc = new MediaController(this);
         mc.setMediaPlayer((MediaController.MediaPlayerControl) mYoutubePlayer);
-        mYoutubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
+        YouTubePlayerView mYoutubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
         mYoutubePlayerView.initialize(GOOGLE_YOUTUBE_API, this);
 
         textViewName = (TextView) findViewById(R.id.textViewName);
@@ -90,12 +89,6 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
     }
 
 
-    public void back_btn_pressed(View view) {
-        finish();
-    }
-
-
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
         youTubePlayer.setPlayerStateChangeListener(playerStateChangeListener);
@@ -104,9 +97,6 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
             youTubePlayer.cueVideo(youtubeDataModel.getVideo_id());
         }
         mYoutubePlayer = youTubePlayer;
-        if (isInPictureInPictureMode()){
-            youTubePlayer.cueVideo(youtubeDataModel.getVideo_id());
-        }
     }
 
     private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
@@ -187,100 +177,6 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
     }
 
 
-    private ProgressDialog pDialog;
-
-
-    class RequestDownloadVideoStream extends AsyncTask<String, String, String> {
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            pDialog = new ProgressDialog(DetailsActivity.this);
-            pDialog.setMessage("Downloading file. Please wait...");
-            pDialog.setIndeterminate(false);
-            pDialog.setMax(100);
-            pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-            pDialog.setCancelable(false);
-            pDialog.show();
-        }
-
-        @Override
-        protected String doInBackground(String... params) {
-            InputStream is = null;
-            URL u = null;
-            int len1 = 0;
-            int temp_progress = 0;
-            int progress = 0;
-            try {
-                u = new URL(params[0]);
-                is = u.openStream();
-                URLConnection huc = (URLConnection) u.openConnection();
-                huc.connect();
-                int size = huc.getContentLength();
-
-                if (huc != null) {
-                    String file_name = params[1] + ".mp4";
-                    String storagePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/YoutubeVideos";
-                    File f = new File(storagePath);
-                    if (!f.exists()) {
-                        f.mkdir();
-                    }
-
-                    FileOutputStream fos = new FileOutputStream(f+"/"+file_name);
-                    byte[] buffer = new byte[1024];
-                    int total = 0;
-                    if (is != null) {
-                        while ((len1 = is.read(buffer)) != -1) {
-                            total += len1;
-                            // publishing the progress....
-                            // After this onProgressUpdate will be called
-                            progress = (int) ((total * 100) / size);
-                            if(progress >= 0) {
-                                temp_progress = progress;
-                                publishProgress("" + progress);
-                            }else
-                                publishProgress("" + temp_progress+1);
-
-                            fos.write(buffer, 0, len1);
-                        }
-                    }
-
-                    if (fos != null) {
-                        publishProgress("" + 100);
-                        fos.close();
-                    }
-                }
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                if (is != null) {
-                    try {
-                        is.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-            return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(String... values) {
-            super.onProgressUpdate(values);
-            pDialog.setProgress(Integer.parseInt(values[0]));
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            if (pDialog.isShowing())
-                pDialog.dismiss();
-        }
-    }
-
-
     private class RequestYoutubeCommentAPI extends AsyncTask<Void, String, String> {
 
         @Override
@@ -334,6 +230,24 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
             try {
                 JSONArray jsonArray = jsonObject.getJSONArray("items");
                 for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject json = jsonArray.getJSONObject(i);
+
+                    YoutubeCommentModel youtubeObject = new YoutubeCommentModel();
+                    JSONObject jsonTopLevelComment = json.getJSONObject("snippet").getJSONObject("topLevelComment");
+                    JSONObject jsonSnippet = jsonTopLevelComment.getJSONObject("snippet");
+
+                    String title = jsonSnippet.getString("authorDisplayName");
+                    String thumbnail = jsonSnippet.getString("authorProfileImageUrl");
+                    String comment = jsonSnippet.getString("textDisplay");
+
+                    youtubeObject.setTitle(title);
+                    youtubeObject.setComment(comment);
+                    youtubeObject.setThumbnail(thumbnail);
+                    mList.add(youtubeObject);
+
+
+                }
+                for (int i = 20; i < jsonArray.length(); i++) {
                     JSONObject json = jsonArray.getJSONObject(i);
 
                     YoutubeCommentModel youtubeObject = new YoutubeCommentModel();

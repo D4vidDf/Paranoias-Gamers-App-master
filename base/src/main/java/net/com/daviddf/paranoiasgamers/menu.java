@@ -64,16 +64,17 @@ public class menu extends AppCompatActivity {
         donaciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog builder = new Dialog(menu.this);
-                builder.setContentView(R.layout.popup);
-                TextView title = (TextView) builder.findViewById(R.id.title);
-                ImageButton imageButton = (ImageButton) builder.findViewById(R.id.image);
-                builder.show();
-                Button clickButton = (Button) builder.findViewById(R.id.buyButtondon);
+                final Dialog builderd = new Dialog(menu.this);
+                builderd.setContentView(R.layout.popup);
+                TextView title = (TextView) builderd.findViewById(R.id.title);
+                ImageButton imageButton = (ImageButton) builderd.findViewById(R.id.image);
+                builderd.show();
+                Button clickButton = (Button) builderd.findViewById(R.id.buyButtondon);
                 clickButton.setOnClickListener(new View.OnClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
                     public void onClick(View v) {
+                        builderd.hide();
                         CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
                         builder.addDefaultShareMenuItem();
                         builder.setToolbarColor(getColor(R.color.colorPrimary));
@@ -185,7 +186,9 @@ public class menu extends AppCompatActivity {
 
                                             @Override
                                             public void onClick(View v) {
+                                                builder.hide();
                                                 startActivity(new Intent(menu.this,LoginActivity.class));
+
                                             }
                                         });
                                     }

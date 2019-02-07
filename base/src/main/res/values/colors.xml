@@ -19,7 +19,7 @@
     <!-- inverse text color: 87% black -->
     <color name="textColorPrimaryInverse">#FFFFFF</color>
     <color name="textColorSecondaryInverse">#9E9E9E</color>
-    <color name="colorAccent">#1fcc94</color>
+    <color name="colorAccent">#7c4dff</color>
     <color name="black">#000000</color>
 
     <!-- Login -->
@@ -27,7 +27,7 @@
 
     <!-- Open Chat -->
     <color name="openChatText">#47505d</color>
-    <color name="openChatNicknameOther">#3a414d</color>
+    <color name="openChatNicknameOther">#859c9a</color>
     <color name="openChatNicknameMe">#00BCD4</color>
 
     <!-- Group Chat -->
@@ -36,11 +36,11 @@
     <color name="groupChatBubbleOther">#eef1f6</color>
     <color name="groupChatTextOther">#000000</color>
 
-    <color name="groupChatReadReceiptMe">#1fcc94</color>
+    <color name="groupChatReadReceiptMe">#7c4dff</color>
     <color name="groupChatReadReceiptOther">#00BCD4</color>
 
     <color name="groupChatAdminBackground">#e0fcff</color>
-    <color name="groupChatAdminText">#39474e</color>
+    <color name="groupChatAdminText">#ff0000</color>
 
     <color name="groupChatDateText">#ffffff</color>
     <color name="groupChatDateBackground">#C0C0C0</color>

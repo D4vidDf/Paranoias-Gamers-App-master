@@ -16,6 +16,8 @@ import com.google.firebase.appindexing.FirebaseAppIndex;
 import com.google.firebase.appindexing.FirebaseUserActions;
 import com.google.firebase.appindexing.Indexable;
 import com.google.firebase.appindexing.builders.Actions;
+import com.google.firebase.inappmessaging.FirebaseInAppMessaging;
+import com.google.firebase.inappmessaging.display.internal.injection.components.InAppMessageComponent;
 
 import net.com.daviddf.paranoiasgamers.fragments.ChannelFragment;
 import net.com.daviddf.paranoiasgamers.fragments.Noticias;
@@ -23,12 +25,21 @@ import net.com.daviddf.paranoiasgamers.fragments.instagram;
 import net.com.daviddf.paranoiasgamers.fragments.twitter;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemReselectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
-
+    private FirebaseInAppMessaging mInAppMessaging;
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mInAppMessaging = FirebaseInAppMessaging.getInstance();
+        mInAppMessaging.setAutomaticDataCollectionEnabled(true);
+        mInAppMessaging.setMessagesSuppressed(false);
+        mInAppMessaging.isAutomaticDataCollectionEnabled();
+        mInAppMessaging.areMessagesSuppressed();
+
+
+
+
         loadFragment(new Noticias());
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);

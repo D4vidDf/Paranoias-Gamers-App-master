@@ -9,8 +9,9 @@
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="56dp"
+        android:layout_height="0dp"
+        android:scrollbarSize="4dp"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,10 +22,12 @@
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
         android:background="?android:attr/windowBackground"
+        android:scrollbarSize="6dp"
         app:itemHorizontalTranslationEnabled="true"
+        app:itemIconSize="22dp"
         app:itemIconTint="@color/colorPrimaryDark"
         app:itemTextColor="@color/colorPrimaryDark"
-        app:labelVisibilityMode="unlabeled"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

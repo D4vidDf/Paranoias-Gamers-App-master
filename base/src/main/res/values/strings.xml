@@ -36,7 +36,7 @@
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="cargando" translatable="false">Loading...</string>
 
-    <string name="new_message_notification_title_template" translatable="false">New message: %1$s</string>
+    <string name="new_message_notification_title_template" translatable="false">Nuevo mensaje: %1$s</string>
 
     <!-- TODO: remove this placeholder text -->
     <string name="new_message_notification_placeholder_text_template" translatable="false">You said %1$s and lorem ipsum
@@ -51,7 +51,7 @@
     <string name="action_share" translatable="false">Share</string>
     <string name="action_reply" translatable="false">Reply</string>
     <string name="title_activity_donacion_anuncio" translatable="false">DonacionAnuncio</string>
-    <string name="action_settings" translatable="false">Settings</string>
+    <string name="action_settings" translatable="false">Ajustes</string>
 
     <string name="interstitial_ad_sample" translatable="false">Interstitial Ad Sample</string>
     <string name="start_level" translatable="false">Nivel 1</string>
@@ -69,8 +69,8 @@
     <string name="all_create" translatable="false">Crear</string>
     <string name="all_invite" translatable="false">Invitar</string>
 
-    <string name="all_group_channels" translatable="false" >Grupos</string>
-    <string name="all_open_channels" translatable="false">Canales Abiertos</string>
+    <string name="all_group_channels" translatable="false">Chats</string>
+    <string name="all_open_channels" translatable="false">Grupos Abiertos</string>
 
     <!-- main -->
     <string name="main_drawer_open" translatable="false">Abrir navegación</string>
@@ -86,25 +86,25 @@
     <string name="login_disconnect" translatable="false">Salir</string>
 
     <!-- Open Channel List -->
-    <string name="open_channel_list_participant_count" translatable="false" >%1$d participantes</string>
+    <string name="open_channel_list_participant_count" translatable="false">%1$d participantes</string>
 
-    <string name="create_open_channel" translatable="false">Crear canal abierto</string>
+    <string name="create_open_channel" translatable="false">Crear grupo abierto</string>
     <string name="participant_list" translatable="false">Participantes</string>
 
     <!-- Group Channel List -->
     <string name="group_channel_list_file_message_text" translatable="false">%1$s ha subido un archivo.</string>
 
-    <string name="create_group_channel" translatable="false">Crear Grupo</string>
+    <string name="create_group_channel" translatable="false">Añadir usuarios</string>
     <string name="member_list" translatable="false">Miembros</string>
     <string name="invite_member" translatable="false">Invitar miembros</string>
 
-    <string name="member_info" translatable="false"></string>
+    <string name="member_info" translatable="false" />
 
     <!-- Content descriptions -->
     <string name="open_channel_chat_content_desc_profile" translatable="false">Imagen de perfil</string>
 
     <!-- Menu actions -->
-    <string name="action_create_channel" translatable="false">Crear canal</string>
+    <string name="action_create_channel" translatable="false">Crear grupo publico</string>
 
     <string name="download" translatable="false">Descargar</string>
     <string name="cancel" translatable="false">Cancelar</string>
@@ -115,6 +115,24 @@
     <!-- Message Status -->
     <string name="message_sending" translatable="false">Enviando</string>
     <string name="message_failed" translatable="false">ERROR</string>
-    <string name="antes_de_entrar">Antes de entrar</string>
-    <string name="la_palabra_clave_es_nica_por_lo_cual_acuerdese_de_ella_junto_a_su_usuario_debido_a_que_funcionar_como_una_contrase_a">La palabra clave es única por lo cual acuerdese de ella junto a su usuario debido a que funcionará como una contraseña</string>
+    <string name="antes_de_entrar" translatable="false">Antes de entrar</string>
+    <string name="msg_subscribe_failed" translatable="false">Error al conectarse con el servicio de notificaciones</string>
+    <string name="msg_subscribed" translatable="false">Conectado con éxito al servicio de notificaciones</string>
+    <string name="la_palabra_clave_es_nica_por_lo_cual_acuerdese_de_ella_junto_a_su_usuario_debido_a_que_funcionar_como_una_contrase_a" translatable="false">La palabra clave es única por lo cual acuerdese de ella junto a su usuario debido a que funcionará como una contraseña</string>
+
+    <string name="new_message2_notification_title_template" translatable="false">New message2: %1$s</string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="new_message2_notification_placeholder_text_template" translatable="false">You said %1$s and lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit vel
+        semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis.
+        Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper
+        ornare lacus. Duis ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis
+        viverra rhoncus sit amet nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec
+        tortor.
+    </string>
+    <string name="abrir" translatable="false">Abrir</string>
+    <string name="shortcutdisablechat" translatable="false">Entrar al chat</string>
+    <string name="shrotcutchat" translatable="false">Escribir un mensaje</string>
+    <string name="shortcutlongchat" translatable="false">Escribir un mensaje en un grupo</string>
 </resources>

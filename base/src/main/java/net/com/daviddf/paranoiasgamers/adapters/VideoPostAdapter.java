@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -35,24 +36,27 @@ public class VideoPostAdapter extends RecyclerView.Adapter<VideoPostAdapter.Yout
 
     }
 
+    @NonNull
     @Override
-    public YoutubePostHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public YoutubePostHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.youtube_post_layout,parent,false);
-        YoutubePostHolder postHolder = new YoutubePostHolder(view);
-        return postHolder;
+        return new YoutubePostHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(YoutubePostHolder holder, int position) {
+    public void onBindViewHolder(@NonNull YoutubePostHolder holder, int position) {
 
         //set the views here
-        TextView textViewTitle = holder.textViewTitle;
-        TextView textViewDes = holder.textViewDes;
-        TextView textViewDate = holder.textViewDate;
-        ImageView ImageThumb = holder.ImageThumb;
+        TextView textViewTitle;
+        textViewTitle = holder.textViewTitle;
+        TextView textViewDes;
+        textViewDes = holder.textViewDes;
+        TextView textViewDate;
+        textViewDate = holder.textViewDate;
+        ImageView ImageThumb;
+        ImageThumb = holder.ImageThumb;
 
         YoutubeDataModel object = dataSet.get(position);
-
         textViewTitle.setText(object.getTitle());
         textViewDate.setText(object.getPublishedAt());
         holder.bind(dataSet.get(position), listener);
@@ -75,22 +79,17 @@ public class VideoPostAdapter extends RecyclerView.Adapter<VideoPostAdapter.Yout
         TextView textViewDate;
         ImageView ImageThumb;
 
-        public YoutubePostHolder(View itemView) {
+        YoutubePostHolder(View itemView) {
             super(itemView);
-            this.textViewTitle = (TextView) itemView.findViewById(R.id.textViewTitle);
-            this.textViewDes = (TextView) itemView.findViewById(R.id.textViewDes);
-            this.textViewDate = (TextView) itemView.findViewById(R.id.textViewDate);
-            this.ImageThumb = (ImageView) itemView.findViewById(R.id.ImageThumb);
+            this.textViewTitle   = itemView.findViewById(R.id.textViewTitle);
+            this.textViewDes     = itemView.findViewById(R.id.textViewDes);
+            this.textViewDate    = itemView.findViewById(R.id.textViewDate);
+            this.ImageThumb      = itemView.findViewById(R.id.ImageThumb);
 
         }
 
         public void bind(final YoutubeDataModel item, final OnItemClickListener listener) {
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listener.onItemClick(item);
-                }
-            });
+            itemView.setOnClickListener(v -> listener.onItemClick(item));
         }
     }
 }

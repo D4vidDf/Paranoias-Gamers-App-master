@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
             android:layout_marginBottom="10dp"
-            android:text="COMMENTS"
+            android:text="@string/comentarios"
             android:textColor="#575757" />
 
         <androidx.recyclerview.widget.RecyclerView
